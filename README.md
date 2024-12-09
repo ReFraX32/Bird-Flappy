@@ -12,3 +12,20 @@
 - Simple, intuitive controls.
 - Endless gameplay.
 - Retro-style graphics.
+
+## Installation
+### Android
+1. **Download the APK**: [Bird.Flappy.apk](https://github.com/ReFraX32/Bird-Flappy/releases/download/release/Bird.Flappy.apk)
+2. **Install the APK**:
+   - Enable installation from unknown sources in your device settings.
+   - Open the downloaded APK file.
+   - Follow the on-screen instructions to install the game.
+
+### PC (Windows)
+1. **Download the Game**: [Bird.Flappy.zip](https://github.com/ReFraX32/Bird-Flappy/releases/download/release/Bird.Flappy.zip)
+2. **Extract the ZIP**:
+   - Right-click on the downloaded ZIP file.
+   - Select "Extract All..." and choose a destination folder.
+3. **Run the Game**:
+   - Open the extracted folder.
+   - Double-click on the `Bird Flappy.exe` file to start the game.
