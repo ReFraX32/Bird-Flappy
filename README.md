@@ -1,4 +1,5 @@
 # Bird Flappy
+![Bird Flappy Preview](https://github.com/user-attachments/assets/a65c62c6-9e83-4c26-8c87-1de143e5a251)
 
 ## Overview
 **Bird Flappy** is a simple 2D game inspired by the classic Flappy Bird. The objective is to navigate the bird through a series of pipes without hitting them.
