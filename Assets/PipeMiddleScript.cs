@@ -1,29 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>Score trigger child sitting inside a pipe gap; fires once when the bird passes.</summary>
 public class PipeMiddleScript : MonoBehaviour
 {
-    public LogicScript logic;
+    private LogicScript logic;
+    private bool counted;
 
-    // Start is called before the first frame update
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D (Collider2D collision) 
-    {
-        if (collision.gameObject.layer == 3)
+        logic = LogicScript.Instance;
+        if (logic == null)
         {
-            logic.AddScore(1);
+            var logicGo = GameObject.FindGameObjectWithTag("Logic");
+            if (logicGo != null) logic = logicGo.GetComponent<LogicScript>();
         }
-        
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (counted || logic == null) return;
+        if (collision.GetComponent<BirdScript>() != null)
+        {
+            counted = true;
+            logic.PipePassed(transform.position);
+        }
+    }
+
+    /// <summary>Reset so a pooled pipe can score again.</summary>
+    public void ResetTrigger() => counted = false;
 }
